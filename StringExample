@@ -1,0 +1,62 @@
+import java.util.Scanner;
+public class StringExemplo
+{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("\fInforme uma string: ");
+        String texto1 = sc.nextLine();
+        
+        System.out.println("Primeira letra: " + texto1.charAt(0));
+        char segundaLetra = texto1.charAt(1);
+        
+        System.out.println("Quantidade de caracteres (comprimento): " +
+                                 texto1.length());
+        int ultimaLetra = texto1.length() - 1;
+        System.out.println("Ultima letra: " + texto1.charAt(ultimaLetra));
+         
+        System.out.print("Informe outra string: ");
+        String texto2 = sc.nextLine();
+        
+        //Testando o equals : texto1 == texto2
+        if(texto1.equals(texto2) == true) System.out.println("Strings idênticos");
+        else System.out.println("Strings não idênticos");
+        
+        //Testando o equalsIgnoreCase
+        if(texto1.equalsIgnoreCase(texto2)==true) System.out.println("Strings com os mesmos caracteres e na mesma ordem");
+        else System.out.println("Strings diferentes!");
+        
+        String minusculo = texto1.toLowerCase();
+        String maiusculo = texto2.toUpperCase();
+        
+        System.out.println("Em caixa baixa: " + minusculo);
+        System.out.println("Em caixa alta: " + maiusculo);
+        
+        //Testando o compareTo
+        int r = texto1.compareToIgnoreCase(texto2);
+        //int r = texto1.compareTo(texto2);
+        if(r==0) System.out.println("Strings identicas");
+        if(r>0) { 
+            System.out.println(texto1 + " é depois de " + texto2);
+            System.out.println("Ordem: " + texto2 + " " + texto1);
+        }
+        if(r<0){
+            System.out.println(texto1 + " é antes de " + texto2);
+            System.out.println("Ordem: " + texto1 + " " + texto2);
+        }
+        
+        if(texto1.startsWith("A")==true) System.out.println("Inicia com A " + texto1);
+        if(texto1.startsWith("pro")==true) System.out.println("Inicia com pro: " + texto2);
+        
+        String subs1 = texto1.substring(4);
+        String subs2 = texto1.substring(2,5);
+        
+        System.out.println("Substrings: " + subs1 + " - " + subs2);
+        
+        sc.close();
+        
+    }
+}
+
+
+
