@@ -1,3 +1,3 @@
 # projectsjava
 
-Examples of programs in Java
+Examples of programs in Java.
